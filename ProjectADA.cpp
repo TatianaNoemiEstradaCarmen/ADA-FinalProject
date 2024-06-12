@@ -26,3 +26,17 @@ struct Persona {
     char correoElectronico[50]; 
     char estadoCivil[20]; 
 };
+
+//Generar DNI aleatorio
+uint32_t dniAleatorio() {
+    return rand() % 100000000;
+}
+
+int main() {
+    srand(time(0)); 
+    Persona persona;
+    persona.dni = dniAleatorio();
+    cout << "DNI: " << persona.dni << endl;
+
+    return 0;
+}
